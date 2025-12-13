@@ -14,15 +14,15 @@ export default function page() {
     <section className="relative overflow-hidden">
       <div className="absolute top-0 right-0 w-60 h-60 rounded-full bg-[#FF5A5F] blur-[160px] opacity-60"></div>
       <div className="absolute bottom-0 left-0 w-60 h-60 rounded-full bg-[#00A699] blur-[200px] opacity-60"></div>
-      <div className="min-h-screen flex items-center justify-center">
-        {/* Content */}
-        <div className="container  mx-auto space-y-8 lg:px-60 md:px-40 px-6">
-          {/* Back button */}
+      <div className="min-h-screen flex items-center justify-center ">
+
+        <div className="w-full max-w-lg   mx-auto space-y-8 px-6 ">
+
           <button className="self-start p-2 -ml-2 text-foreground hover:text-muted-foreground transition-colors">
             <ArrowLeft className="h-6 w-6 text-white" />
           </button>
 
-          {/* Header */}
+
           <div
             className="mt-6 mb-8 animate-fade-in"
             style={{ animationDelay: "0.1s" }}
@@ -30,7 +30,7 @@ export default function page() {
             <h1 className="text-3xl font-bold text-white">Welcome Back</h1>
           </div>
 
-          {/* Form */}
+
           <form className="flex-1 flex flex-col">
             <div
               className="space-y-5 animate-fade-in"
