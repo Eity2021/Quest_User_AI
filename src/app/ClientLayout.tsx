@@ -45,7 +45,7 @@ export default function ClientLayout({
           <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
         )}
 
-        <div className="flex-1 w-full bg-[#0D0D0D]">{children}</div>
+        <div className="flex-1 w-full ">{children}</div>
       </main>
     </div>
 

@@ -5,12 +5,10 @@ import Link from "next/link";
 import { LogOut } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { usePathname } from "next/navigation";
-// import { useQuery } from "@tanstack/react-query";
-// import AccountIcon from "@/assets/svg/AccountIcon";
-// import TodoListIcon from "@/assets/svg/TodoListIcon";
-// import { userProfile } from "@/hooks/ReactQueryHooks";
-// import DashboardIcon from "@/assets/svg/DashboardIcon";
 
+import userProfile from "@/assets/images/user_profile.jpg"
+import { Image } from "@unpic/react/nextjs";
+import { LayoutDashboard ,UserPen } from 'lucide-react';
 const Sidebar: React.FC = () => {
     const pathname = usePathname();
     const router = useRouter();
@@ -23,17 +21,13 @@ const Sidebar: React.FC = () => {
         {
             href: "/",
             label: "Dashboard",
-            //   icon: (color: string) => <DashboardIcon color={color} size={24} />,
+             icon: (color: string) => <LayoutDashboard  color={color} size={24} />,
         },
+    
         {
-            href: "/",
-            label: "Todos",
-            //   icon: (color: string) => <TodoListIcon color={color} size={24} />,
-        },
-        {
-            href: "/",
-            label: "Account Information",
-            //   icon: (color: string) => <AccountIcon color={color} size={24} />,
+            href: "/profile",
+            label: "Profile",
+             icon: (color: string) => <UserPen  color={color} size={24} />,
         },
     ];
 
@@ -47,26 +41,28 @@ const Sidebar: React.FC = () => {
 
             <div className="relative h-full">
                 <div className="text-white flex flex-col items-center py-8 ">
-                    <div className="mb-2 mt-8 w-[86px] h-[86px]">
-                        {/* <img
-              src={user?.profile_image}
+                    <div className="mb-2 mt-8 ">
+            <Image
+              src={userProfile}
               alt="userImage"
-              className=" rounded-full w-[86px] h-[86px]"
-            /> */}
-                        Logo
+           width={86}
+  height={86}
+  className="rounded-full object-cover"
+            /> 
+                        
                     </div>
                     <div className="text-center mb-12">
-                        {/* <h4 className="font-semibold text-[16px] font-inter">
-              {user?.first_name} {user?.last_name}
-            </h4> */}
-                        {/* <p className="text-[16px] font-inter font-normal">{user?.email}</p> */}
+                     <h4 className="font-semibold text-[16px] font-inter">
+              MD Nabin Islam
+            </h4>
+                        <p className="text-[16px] font-inter font-normal">user</p> 
                     </div>
                     <nav className="w-full">
                         <ul className="space-y-2">
-                            {navItems.map(({ href, label, }) => {
+                            {navItems.map(({ href, label,icon }) => {
                                 // icon
                                 const isActive = pathname === href;
-                                // const iconColor = isActive ? "#fff" : "#8CA3CD";
+                                const iconColor = isActive ? "#fff" : "#8CA3CD";
                                 return (
                                     <li key={href}>
                                         <Link
@@ -74,7 +70,7 @@ const Sidebar: React.FC = () => {
                                             className={`flex items-center pr-4 pl-8 py-3  font-medium text-white   text-[16px] font-inter
                                                 }`}
                                         >
-                                            {/* {icon && <span className="mr-2">{icon(iconColor)}</span>} */}
+                                            {icon && <span className="mr-2">{icon(iconColor)}</span>}
                                             {label}
                                         </Link>
                                     </li>

@@ -36,7 +36,7 @@ const LessonProgress: React.FC = () => {
                     <h2 className="text-xl font-semibold text-white">Today's Learning</h2>
                     <Button variant="link" className="text-[#FF6B6B] p-0 h-auto">See More</Button>
                 </div>
-                <div className="grid grid-cols-2 gap-6">
+                <div className="grid grid-cols-2 gap-4">
                     {todayLearning.map((lesson, index) => (
                         <LessonProgressCard key={index} lesson={lesson} />
                     ))}
