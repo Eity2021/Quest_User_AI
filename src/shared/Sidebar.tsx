@@ -62,12 +62,12 @@ const Sidebar: React.FC = () => {
                             {navItems.map(({ href, label,icon }) => {
                                 // icon
                                 const isActive = pathname === href;
-                                const iconColor = isActive ? "#fff" : "#8CA3CD";
+                                const iconColor = isActive ? "#FF5A5F" : "#fff";
                                 return (
                                     <li key={href}>
                                         <Link
                                             href={href}
-                                            className={`flex items-center pr-4 pl-8 py-3  font-medium text-white   text-[16px] font-inter
+                                            className={`flex items-center pr-4 pl-8 py-3  font-medium ${isActive ? "text-[#FF5A5F]":"text-white"}   text-[16px] font-inter
                                                 }`}
                                         >
                                             {icon && <span className="mr-2">{icon(iconColor)}</span>}

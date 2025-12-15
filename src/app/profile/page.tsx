@@ -111,7 +111,7 @@ export default function page() {
                 <h2 className="text-2xl font-bold text-white mb-6">Learning Statistics</h2>
                 <div className="">
                   <div className="grid grid-cols-2 md:grid-cols-2 gap-6">
-                  <div className=" bg-[#2A1E2366]">
+                  <div className=" bg-[#2A1E2366] rounded-[12px]">
                   <div className="flex justify-between items-center h-full px-6">
                      
                    <div>
@@ -154,58 +154,61 @@ export default function page() {
 
             {/* Right Column - Quick Links */}
             <div className="lg:col-span-1 ">
-              <Card className="p-6 bg-[#424242] border-border h-full">
-                <h2 className="text-lg font-bold text-foreground mb-4">Quick Links</h2>
+              <div className="rounded-xl bg-linear-to-r from-[#F65C5E] to-[#00A699] p-0.5 ">
+                     <Card className="p-6 bg-[#0D0D0D] border-none ">
+                <h2 className="text-lg font-bold text-white mb-4">Quick Links</h2>
                 <div className="space-y-3 flex flex-col">
-                  <Button variant="outline" className="justify-start gap-3 h-auto py-3 px-4 bg-transparent">
+                  <Button variant="outline" className="justify-start gap-3 h-auto py-3 px-4 bg-[#F6F4F21A] text-white">
                     <Bookmark className="h-5 w-5" />
                     <span>My Bookings</span>
                   </Button>
 
-                  <Button variant="outline" className="justify-start gap-3 h-auto py-3 px-4 bg-transparent">
+                  <Button variant="outline" className="justify-start gap-3 h-auto py-3 px-4 bg-transparent text-white">
                     <CreditCard className="h-5 w-5" />
                     <span>Payment History</span>
                   </Button>
 
-                  <Button variant="outline" className="justify-start gap-3 h-auto py-3 px-4 bg-transparent">
+                  <Button variant="outline" className="justify-start gap-3 h-auto py-3 px-4 bg-transparent text-white">
                     <BookOpen className="h-5 w-5" />
                     <span>Study History</span>
                   </Button>
 
-                  <Button variant="outline" className="justify-start gap-3 h-auto py-3 px-4 bg-transparent">
+                  <Button variant="outline" className="justify-start gap-3 h-auto py-3 px-4 bg-transparent text-white">
                     <Trophy className="h-5 w-5" />
                     <span>Achievements</span>
                   </Button>
 
-                  <Button variant="outline" className="justify-start gap-3 h-auto py-3 px-4 bg-transparent">
+                  <Button variant="outline" className="justify-start gap-3 h-auto py-3 px-4 bg-transparent text-white">
                     <Settings className="h-5 w-5" />
                     <span>Settings</span>
                   </Button>
 
-                  <Button variant="outline" className="justify-start gap-3 h-auto py-3 px-4 bg-transparent">
+                  <Button variant="outline" className="justify-start gap-3 h-auto py-3 px-4 bg-transparent text-white">
                     <HelpCircle className="h-5 w-5" />
                     <span>Help & Support</span>
                   </Button>
 
-                  <Button variant="outline" className="justify-start gap-3 h-auto py-3 px-4 bg-transparent">
+                  <Button variant="outline" className="justify-start gap-3 h-auto py-3 px-4 bg-transparent text-white">
                     <Users className="h-5 w-5" />
                     <span>Invite Friends</span>
                   </Button>
 
-                  <Button variant="outline" className="justify-start gap-3 h-auto py-3 px-4 bg-transparent">
+                  <Button variant="outline" className="justify-start gap-3 h-auto py-3 px-4 bg-transparent text-white">
                     <Star className="h-5 w-5" />
                     <span>Rate Our App</span>
                   </Button>
 
                   <Button
                     variant="outline"
-                    className="justify-start gap-3 h-auto py-3 px-4 text-destructive hover:bg-destructive/10 bg-transparent"
+                    className="justify-start gap-3 h-auto py-3 px-4 text-destructive "
                   >
                     <LogOut className="h-5 w-5" />
                     <span>Log Out</span>
                   </Button>
                 </div>
               </Card>
+              </div>
+         
             </div>
           </div>
         </main>
