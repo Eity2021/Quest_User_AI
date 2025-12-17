@@ -2,7 +2,9 @@ import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/c
 import { Progress } from "@/components/ui/progress";
 import { Separator } from "@/components/ui/separator";
 import { Bell, Sparkles, BookOpen, Clock, User, Lightbulb, ChevronRight, Menu, Home, FileText, Settings } from "lucide-react";
-import LessonProgress from "./LessonProgress";
+import LessonProgress from "@/components/ui/home/LessonProgress";
+
+
 const LessonProgressCard: React.FC<{ lesson: LessonProgress }> = ({ lesson }) => (
     <Card className={`bg-[#1E1E1E] border border-[#333333] mb-4`}>
         <CardContent className="p-4 sm:p-6 flex justify-between items-center">
@@ -22,7 +24,7 @@ const LessonProgressCard: React.FC<{ lesson: LessonProgress }> = ({ lesson }) =>
                         <BookOpen className="h-3 w-3 mr-1" /> {lesson.lessons} Lessons
                     </div>
                     <Separator orientation="vertical" className="h-4 bg-gray-600 hidden sm:block" />
-                    <div className="flex items-center hidden sm:block">
+                    <div className="flex items-center  sm:block">
                         <Clock className="h-3 w-3 mr-1" /> {lesson.duration}
                     </div>
                 </CardDescription>

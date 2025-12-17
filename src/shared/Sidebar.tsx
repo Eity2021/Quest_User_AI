@@ -25,10 +25,23 @@ const Sidebar: React.FC = () => {
         },
     
         {
+            href: "/dashboard/tests",
+            label: "Tests",
+             icon: (color: string) => <LayoutDashboard  color={color} size={24} />,
+        },
+         {
+            href: "/dashboard/tutor",
+            label: "Tutor",
+             icon: (color: string) => <UserPen  color={color} size={24} />,
+        },
+    
+        {
             href: "/profile",
             label: "Profile",
              icon: (color: string) => <UserPen  color={color} size={24} />,
         },
+    
+       
     ];
 
     //   const handleLogout = () => {

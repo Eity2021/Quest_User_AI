@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import LessonProgressCard from "./LessonProgressCard";
+import LessonProgressCard from "../../../components/ui/home/LessonProgressCard";
 
 interface LessonProgress {
     title: string;
