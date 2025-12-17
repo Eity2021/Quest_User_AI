@@ -62,14 +62,13 @@ export default function RecommendedTests() {
         {recommendedTests.map((test) => (
           <Card
             key={test.id}
-            className="group cursor-pointer border border-border bg-transparent p-6 transition-all hover:shadow-lg">
+            className="group cursor-pointer border  p-6 bg-transparent ">
             <div className="mb-4 flex items-start justify-between">
               <div className="flex-1">
                 <h3 className=" line-clamp-2 text-lg font-semibold text-white">{test.title}</h3>
               </div>
               <Badge className={getDifficultyBadgeColor(test.difficulty)}>{test.difficulty}</Badge>
             </div>
-
             <div className="mb-4 flex flex-wrap items-center gap-4 text-sm text-muted-foreground">
               <div className="flex items-center gap-1">
                 <BookOpen className="h-4 w-4" />
@@ -80,7 +79,6 @@ export default function RecommendedTests() {
                 <span>{test.duration} Min</span>
               </div>
             </div>
-
             <div className="mb-4 flex items-center justify-between">
               <div>
                 <p className="text-xs text-muted-foreground">Best Score</p>

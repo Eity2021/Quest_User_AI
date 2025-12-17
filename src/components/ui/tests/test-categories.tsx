@@ -51,10 +51,7 @@ export default function TestCategories() {
                             key={category.id}
                             className="group cursor-pointer border  border-[#F6F4F20D] bg-transparent p-4 transition-all  w-full"
                             style={{ boxShadow: "inset 0 2px 8px rgba(246, 244, 242, 0.45)" }} >
-                            <Button
-                                variant="outline">
-                                Open Modal
-                            </Button>
+                       
                             <div className="mb-4 flex items-start justify-between">
                                 <div className={`rounded-lg bg-linear-to-br ${category.color} p-3`}>
                                     <Icon className="h-6 w-6 text-white" />
