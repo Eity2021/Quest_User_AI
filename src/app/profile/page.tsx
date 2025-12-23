@@ -17,9 +17,9 @@ export default function page() {
       <div className="absolute bottom-0 right-0 w-60 h-60 rounded-full bg-[#FF5A5F] blur-[200px] opacity-60 -z-10"></div>
       <div className="min-h-screen mx-auto container ">
         {/* ProfileDropdown */}
-         <ProfileDropdown></ProfileDropdown>
+        <ProfileDropdown></ProfileDropdown>
         {/* Main Content */}
-        <main className=" px-6 py-12">
+        <main className=" px-6 py-8">
           <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
             <ProfileInfo></ProfileInfo>
             <QuickLinks></QuickLinks>

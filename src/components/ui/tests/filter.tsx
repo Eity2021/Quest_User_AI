@@ -1,4 +1,5 @@
-import { Button } from '../button'
+import { Button } from "../button";
+
 
 export default function Filter({ setOpen }: { setOpen: (open: boolean) => void }) {
   return (

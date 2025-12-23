@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 
 import userProfile from "@/assets/images/user_profile.jpg"
 import { Image } from "@unpic/react/nextjs";
-import { LayoutDashboard ,UserPen } from 'lucide-react';
+import { LayoutDashboard, UserPen } from 'lucide-react';
 const Sidebar: React.FC = () => {
     const pathname = usePathname();
     const router = useRouter();
@@ -21,27 +21,33 @@ const Sidebar: React.FC = () => {
         {
             href: "/",
             label: "Dashboard",
-             icon: (color: string) => <LayoutDashboard  color={color} size={24} />,
+            icon: (color: string) => <LayoutDashboard color={color} size={24} />,
         },
-    
+
         {
             href: "/dashboard/tests",
             label: "Tests",
-             icon: (color: string) => <LayoutDashboard  color={color} size={24} />,
+            icon: (color: string) => <LayoutDashboard color={color} size={24} />,
         },
-         {
+        {
             href: "/dashboard/tutor",
             label: "Tutor",
-             icon: (color: string) => <UserPen  color={color} size={24} />,
+            icon: (color: string) => <UserPen color={color} size={24} />,
         },
-    
+
+        {
+            href: "/dashboard/chatbox",
+            label: "ChatBox",
+            icon: (color: string) => <UserPen color={color} size={24} />,
+        },
+
         {
             href: "/profile",
             label: "Profile",
-             icon: (color: string) => <UserPen  color={color} size={24} />,
+            icon: (color: string) => <UserPen color={color} size={24} />,
         },
-    
-       
+
+
     ];
 
     //   const handleLogout = () => {
@@ -55,24 +61,24 @@ const Sidebar: React.FC = () => {
             <div className="relative h-full">
                 <div className="text-white flex flex-col items-center py-8 ">
                     <div className="mb-2 mt-8 ">
-            <Image
-              src={userProfile}
-              alt="userImage"
-           width={86}
-  height={86}
-  className="rounded-full object-cover"
-            /> 
-                        
+                        <Image
+                            src={userProfile}
+                            alt="userImage"
+                            width={86}
+                            height={86}
+                            className="rounded-full object-cover"
+                        />
+
                     </div>
                     <div className="text-center mb-12">
-                     <h4 className="font-semibold text-[16px] font-inter">
-              MD Nabin Islam
-            </h4>
-                        <p className="text-[16px] font-inter font-normal">user</p> 
+                        <h4 className="font-semibold text-[16px] font-inter">
+                            MD Nabin Islam
+                        </h4>
+                        <p className="text-[16px] font-inter font-normal">user</p>
                     </div>
                     <nav className="w-full">
                         <ul className="space-y-2">
-                            {navItems.map(({ href, label,icon }) => {
+                            {navItems.map(({ href, label, icon }) => {
                                 // icon
                                 const isActive = pathname === href;
                                 const iconColor = isActive ? "#FF5A5F" : "#fff";
@@ -80,7 +86,7 @@ const Sidebar: React.FC = () => {
                                     <li key={href}>
                                         <Link
                                             href={href}
-                                            className={`flex items-center pr-4 pl-8 py-3  font-medium ${isActive ? "text-[#FF5A5F]":"text-white"}   text-[16px] font-inter
+                                            className={`flex items-center pr-4 pl-8 py-3  font-medium ${isActive ? "text-[#FF5A5F]" : "text-white"}   text-[16px] font-inter
                                                 }`}
                                         >
                                             {icon && <span className="mr-2">{icon(iconColor)}</span>}
