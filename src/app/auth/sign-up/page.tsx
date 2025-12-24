@@ -1,6 +1,6 @@
 import SignUpForm from "@/components/ui/form/signUpForm";
 import { ArrowLeft } from "lucide-react";
-import { } from "lucide-react";
+import {} from "lucide-react";
 export default function page() {
   return (
     <section className="relative overflow-hidden">
