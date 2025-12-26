@@ -1,11 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Header from "@/shared/Header";
 import Sidebar from "@/shared/Sidebar";
-
-
+import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
 // import ProtectedRoute from "@/components/protectedRoute/ProtectedRoute";
 
 export default function ClientLayout({
@@ -17,11 +16,16 @@ export default function ClientLayout({
   const pathname = usePathname();
   const authRoutes = ["/auth/sign-in", "/auth/sign-up"];
   const isAuthPage = authRoutes.includes(pathname);
-
+  const router = useRouter();
+  useEffect(() => {
+    const loggedIn = localStorage.getItem("isLoggedIn");
+    if (!loggedIn) {
+      router.push("/auth/sign-in");
+    }
+  }, []);
   return (
     // <ProtectedRoute>
     <div className="flex min-h-screen ">
-
       {!isAuthPage && (
         <div className="hidden md:flex md:flex-col md:w-80  ">
           <Sidebar />
@@ -48,6 +52,5 @@ export default function ClientLayout({
         <div className="flex-1 w-full ">{children}</div>
       </main>
     </div>
-
   );
 }
