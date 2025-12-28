@@ -5,6 +5,7 @@ import Header from "@/shared/Header";
 import Sidebar from "@/shared/Sidebar";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
+import CustomModal from "@/components/ui/custom-modal/custom-modal";
 // import ProtectedRoute from "@/components/protectedRoute/ProtectedRoute";
 
 export default function ClientLayout({
@@ -13,16 +14,19 @@ export default function ClientLayout({
   children: React.ReactNode;
 }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+
   const pathname = usePathname();
   const authRoutes = ["/auth/sign-in", "/auth/sign-up"];
   const isAuthPage = authRoutes.includes(pathname);
   const router = useRouter();
+
   useEffect(() => {
-    const loggedIn = localStorage.getItem("isLoggedIn");
-    if (!loggedIn) {
+    const token = localStorage.getItem("token");
+    if (!token) {
       router.push("/auth/sign-in");
     }
   }, []);
+
   return (
     // <ProtectedRoute>
     <div className="flex min-h-screen ">

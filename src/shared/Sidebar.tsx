@@ -12,11 +12,12 @@ import { LayoutDashboard, UserPen } from "lucide-react";
 const Sidebar: React.FC = () => {
   const pathname = usePathname();
   const router = useRouter();
-  //   const { data: user } = useQuery({
-  //     queryKey: ["users"],
-  //     queryFn: userProfile,
-  //   });
+  const logout = () => {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
 
+    router.push("/auth/sign-in");
+  };
   const navItems = [
     {
       href: "/",
@@ -96,7 +97,10 @@ const Sidebar: React.FC = () => {
             </ul>
           </nav>
         </div>
-        <div className="flex gap-1 pl-8 absolute bottom-10 cursor-pointer">
+        <div
+          className="flex gap-1 pl-8 absolute bottom-10 cursor-pointer"
+          onClick={logout}
+        >
           <LogOut color="#8CA3CD" />
           <p className="font-medium font-inter text-[16px] text-white">
             Logout

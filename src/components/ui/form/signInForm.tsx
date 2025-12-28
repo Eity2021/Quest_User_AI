@@ -200,11 +200,34 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Eye, EyeOff, ChevronDown } from "lucide-react";
+import CustomModal from "../custom-modal/custom-modal";
 
-const STATIC_USER = {
-  email: "student@questai.xyz",
-  password: "123456",
-};
+const STATIC_USERS = [
+  {
+    id: "u1",
+    role: "student",
+    name: "Ayaan Rahman",
+    age: 21,
+    email: "student@questai.xyz",
+    password: "123456",
+    phone: "+8801712345678",
+    avatar: "/avatars/student.png",
+    department: "Computer Science",
+    institute: "Quest AI University",
+  },
+  {
+    id: "u2",
+    role: "teacher",
+    name: "Dr. Farzana Ahmed",
+    age: 35,
+    email: "teacher@questai.xyz",
+    password: "123456",
+    phone: "+8801812345678",
+    avatar: "/avatars/teacher.png",
+    subject: "Web Development",
+    institute: "Quest AI University",
+  },
+];
 
 export default function SignInForm() {
   const router = useRouter();
@@ -213,80 +236,94 @@ export default function SignInForm() {
   const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [open, setOpen] = useState(false);
   const [error, setError] = useState("");
+  const generateToken = (email: string) => {
+    return btoa(`${email}-${Date.now()}`);
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (email === STATIC_USER.email && password === STATIC_USER.password) {
-      // store login state (optional)
-      localStorage.setItem("isLoggedIn", "true");
+    const user = STATIC_USERS.find(
+      (u) => u.email === email && u.password === password
+    );
 
+    if (user) {
+      const token = generateToken(user.email);
+      localStorage.setItem("token", token);
+      localStorage.setItem("user", JSON.stringify(user));
       router.push("/");
+      setOpen(true);
     } else {
       setError("Invalid email or password");
     }
   };
 
   return (
-    <form onSubmit={handleSubmit} className="flex-1 flex flex-col">
-      <div className="space-y-5">
-        {/* Email */}
-        <div className="space-y-2">
-          <Label className="text-white text-sm font-medium">Email</Label>
-          <Input
-            type="email"
-            placeholder="student@questai.xyz"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="bg-[#2A3545]/80 border-[#3A4555] text-white h-12 rounded-lg"
-          />
-        </div>
-
-        {/* Password */}
-        <div className="space-y-2">
-          <Label className="text-white text-sm font-medium">Password</Label>
-          <div className="relative">
+    <>
+      <form onSubmit={handleSubmit} className="flex-1 flex flex-col">
+        <div className="space-y-5">
+          {/* Email */}
+          <div className="space-y-2">
+            <Label className="text-white text-sm font-medium">Email</Label>
             <Input
-              type={showPassword ? "text" : "password"}
-              placeholder="123456"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="bg-[#2A3545]/80 border-[#3A4555] text-white h-12 rounded-lg pr-12"
+              type="email"
+              placeholder="student@questai.xyz"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="bg-[#2A3545]/80 border-[#3A4555] text-white h-12 rounded-lg"
             />
-            <button
-              type="button"
-              onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-4 top-1/2 -translate-y-1/2 text-white/60"
-            >
-              {showPassword ? <EyeOff /> : <Eye />}
-            </button>
           </div>
+
+          {/* Password */}
+          <div className="space-y-2">
+            <Label className="text-white text-sm font-medium">Password</Label>
+            <div className="relative">
+              <Input
+                type={showPassword ? "text" : "password"}
+                placeholder="123456"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                className="bg-[#2A3545]/80 border-[#3A4555] text-white h-12 rounded-lg pr-12"
+              />
+              <button
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+                className="absolute right-4 top-1/2 -translate-y-1/2 text-white/60"
+              >
+                {showPassword ? <EyeOff /> : <Eye />}
+              </button>
+            </div>
+          </div>
+
+          {/* Error message */}
+          {error && <p className="text-red-400 text-sm">{error}</p>}
         </div>
 
-        {/* Error message */}
-        {error && <p className="text-red-400 text-sm">{error}</p>}
-      </div>
+        {/* Remember me */}
+        <div className="flex items-center gap-2 mt-5">
+          <Checkbox
+            checked={agreedToTerms}
+            onCheckedChange={(v) => setAgreedToTerms(v as boolean)}
+          />
+          <span className="text-sm text-white">Remember me</span>
+        </div>
 
-      {/* Remember me */}
-      <div className="flex items-center gap-2 mt-5">
-        <Checkbox
-          checked={agreedToTerms}
-          onCheckedChange={(v) => setAgreedToTerms(v as boolean)}
-        />
-        <span className="text-sm text-white">Remember me</span>
-      </div>
-
-      {/* Submit */}
-      <div className="mt-8">
-        <Button
-          type="submit"
-          variant="outline"
-          className="w-full h-14 bg-transparent border-2 border-accent text-white"
-        >
-          Sign In
-        </Button>
-      </div>
-    </form>
+        {/* Submit */}
+        <div className="mt-8">
+          <Button
+            type="submit"
+            variant="outline"
+            className="w-full h-14 bg-transparent border-2 border-accent text-white"
+          >
+            Sign In
+          </Button>
+        </div>
+      </form>
+      <CustomModal isOpen={open} onClose={() => setOpen(false)} title="Filters">
+        <div>hi</div>
+      </CustomModal>
+    </>
   );
 }
