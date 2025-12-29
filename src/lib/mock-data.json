@@ -1,0 +1,256 @@
+{
+  "mockTestTitle": "SSC Science Mock Test (Bangla + English)",
+  "totalQuestions": 50,
+  "conversations": [
+    {
+      "id": 1,
+      "student": "Force এর SI unit কী?",
+      "agent": "ভালো প্রশ্ন! As your AI science assistant, আমি নিশ্চিত করে বলছি যে force এর SI unit হলো Newton (N)। 1 Newton মানে হলো 1 kg ভরের বস্তুকে 1 m/s² acceleration দিতে যে force লাগে।"
+    },
+    {
+      "id": 2,
+      "student": "Laws of motion কে আবিষ্কার করেন?",
+      "agent": "Great question! Laws of motion প্রস্তাব করেন Sir Isaac Newton, যা physics-এর foundation হিসেবে ধরা হয়।"
+    },
+    {
+      "id": 3,
+      "student": "Sodium এর chemical symbol কী?",
+      "agent": "আমি পরিষ্কার করে বলছি — Sodium এর chemical symbol হলো Na, যা এসেছে এর Latin নাম 'Natrium' থেকে।"
+    },
+    {
+      "id": 4,
+      "student": "Photosynthesis কী?",
+      "agent": "As your learning assistant, সহজভাবে বলি— photosynthesis হলো সেই process যেখানে green plants সূর্যের আলো ব্যবহার করে CO₂ ও water থেকে food তৈরি করে এবং oxygen ছাড়ে।"
+    },
+    {
+      "id": 5,
+      "student": "Respiration এর জন্য কোন gas প্রয়োজন?",
+      "agent": "Good thinking! Respiration এর জন্য Oxygen অত্যাবশ্যক, কারণ এটি food থেকে energy release করতে সাহায্য করে।"
+    },
+    {
+      "id": 6,
+      "student": "Electric current এর SI unit কী?",
+      "agent": "আমি নিশ্চিত করে জানাচ্ছি — electric current এর SI unit হলো Ampere (A)।"
+    },
+    {
+      "id": 7,
+      "student": "Water এর boiling point কত?",
+      "agent": "Standard atmospheric pressure এ water 100°C তে boil করে — এটা physics ও chemistry দুটোতেই গুরুত্বপূর্ণ।"
+    },
+    {
+      "id": 8,
+      "student": "Red Planet কোনটি?",
+      "agent": "Red Planet বলা হয় Mars কে, কারণ এর surface এ iron oxide থাকার জন্য এটি লাল দেখায়।"
+    },
+    {
+      "id": 9,
+      "student": "Heart এর প্রধান কাজ কী?",
+      "agent": "Heart এর main function হলো blood pump করা, যাতে শরীরের সব অংশে oxygen ও nutrients পৌঁছায়।"
+    },
+    {
+      "id": 10,
+      "student": "Food এ কোন ধরনের energy থাকে?",
+      "agent": "Food এ থাকে chemical energy, যা আমাদের শরীর পরে অন্য energy তে convert করে।"
+    },
+    {
+      "id": 11,
+      "student": "Water এর chemical formula কী?",
+      "agent": "Water এর chemical formula হলো H₂O — দুইটি hydrogen এবং একটি oxygen atom।"
+    },
+    {
+      "id": 12,
+      "student": "Speed of light এর মান কত?",
+      "agent": "Vacuum এ light এর speed প্রায় 3 × 10⁸ meter per second।"
+    },
+    {
+      "id": 13,
+      "student": "Human skin এ কোন vitamin তৈরি হয়?",
+      "agent": "Sunlight এর সাহায্যে human skin এ Vitamin D তৈরি হয়।"
+    },
+    {
+      "id": 14,
+      "student": "Atom কী?",
+      "agent": "Atom হলো কোনো element এর সবচেয়ে ছোট unit যা তার chemical properties ধরে রাখে।"
+    },
+    {
+      "id": 15,
+      "student": "Breathing এর জন্য কোন organ দায়ী?",
+      "agent": "Lungs breathing এবং gas exchange এর প্রধান organ।"
+    },
+    {
+      "id": 16,
+      "student": "Pure water এর pH value কত?",
+      "agent": "Pure water এর pH value হলো 7, অর্থাৎ এটি neutral।"
+    },
+    {
+      "id": 17,
+      "student": "Earth এর দিকে বস্তু টানে কোন force?",
+      "agent": "Gravity হলো সেই force যা object কে পৃথিবীর দিকে টানে।"
+    },
+    {
+      "id": 18,
+      "student": "Solar energy এর source কী?",
+      "agent": "Solar energy আসে Sun এ হওয়া nuclear fusion reaction থেকে।"
+    },
+    {
+      "id": 19,
+      "student": "Disease এর বিরুদ্ধে কোন blood cell কাজ করে?",
+      "agent": "White blood cells শরীরকে disease থেকে রক্ষা করে।"
+    },
+    {
+      "id": 20,
+      "student": "Work এর SI unit কী?",
+      "agent": "Work এর SI unit হলো Joule (J)।"
+    },
+    {
+      "id": 21,
+      "student": "Evaporation কী?",
+      "agent": "Evaporation হলো boiling point এর নিচে liquid থেকে vapor এ পরিণত হওয়ার process।"
+    },
+    {
+      "id": 22,
+      "student": "Photosynthesis এ কোন gas লাগে?",
+      "agent": "Photosynthesis এ Carbon dioxide ব্যবহৃত হয়।"
+    },
+    {
+      "id": 23,
+      "student": "Hardest natural substance কোনটি?",
+      "agent": "Diamond হলো পৃথিবীর সবচেয়ে কঠিন natural substance।"
+    },
+    {
+      "id": 24,
+      "student": "Plant এ water পরিবহন করে কোন tissue?",
+      "agent": "Xylem tissue plant এ water এবং minerals পরিবহন করে।"
+    },
+    {
+      "id": 25,
+      "student": "Electricity কী?",
+      "agent": "Electricity হলো electric charge এর flow, সাধারণত electron দ্বারা বহন হয়।"
+    },
+    {
+      "id": 26,
+      "student": "Day এবং night কেন হয়?",
+      "agent": "Earth নিজের axis এ rotate করার কারণে day এবং night হয়।"
+    },
+    {
+      "id": 27,
+      "student": "Conductor কী?",
+      "agent": "Conductor হলো এমন material যা দিয়ে সহজে electric current flow করতে পারে।"
+    },
+    {
+      "id": 28,
+      "student": "Room temperature এ liquid metal কোনটি?",
+      "agent": "Mercury একমাত্র metal যা room temperature এ liquid থাকে।"
+    },
+    {
+      "id": 29,
+      "student": "Respiration কী?",
+      "agent": "Respiration হলো food থেকে energy release করার biological process।"
+    },
+    {
+      "id": 30,
+      "student": "Power এর SI unit কী?",
+      "agent": "Power এর SI unit হলো Watt (W)।"
+    },
+    {
+      "id": 31,
+      "student": "Blood filter করে কোন organ?",
+      "agent": "Kidney blood থেকে waste filter করে।"
+    },
+    {
+      "id": 32,
+      "student": "Magnetism কী?",
+      "agent": "Magnetism হলো এমন একটি force যা certain materials কে attract বা repel করে।"
+    },
+    {
+      "id": 33,
+      "student": "Air এর প্রধান gas কোনটি?",
+      "agent": "Nitrogen air এর প্রায় 78% জুড়ে আছে।"
+    },
+    {
+      "id": 34,
+      "student": "Sound কী?",
+      "agent": "Sound হলো vibration থেকে উৎপন্ন energy যা medium এর মাধ্যমে travel করে।"
+    },
+    {
+      "id": 35,
+      "student": "Body কে control করে কোন organ?",
+      "agent": "Brain শরীরের সব activities control করে।"
+    },
+    {
+      "id": 36,
+      "student": "Carbon dioxide এর formula কী?",
+      "agent": "Carbon dioxide এর chemical formula হলো CO₂।"
+    },
+    {
+      "id": 37,
+      "student": "Magnifying glass এ কোন lens ব্যবহার হয়?",
+      "agent": "Magnifying glass এ Convex lens ব্যবহার করা হয়।"
+    },
+    {
+      "id": 38,
+      "student": "Inertia কী?",
+      "agent": "Inertia হলো object এর সেই tendency যা তার motion change হতে বাধা দেয়।"
+    },
+    {
+      "id": 39,
+      "student": "Blood clotting এ কোন vitamin কাজ করে?",
+      "agent": "Vitamin K blood clotting এ গুরুত্বপূর্ণ ভূমিকা রাখে।"
+    },
+    {
+      "id": 40,
+      "student": "Friction কী?",
+      "agent": "Friction হলো motion এর বিপরীতমুখী force যা দুই surface এর মাঝে কাজ করে।"
+    },
+    {
+      "id": 41,
+      "student": "Eye তে light control করে কোন part?",
+      "agent": "Iris eye তে light এর পরিমাণ control করে।"
+    },
+    {
+      "id": 42,
+      "student": "Renewable resource কী?",
+      "agent": "Renewable resource হলো এমন resource যা আবার তৈরি হতে পারে, যেমন solar energy।"
+    },
+    {
+      "id": 43,
+      "student": "Ecosystem কী?",
+      "agent": "Ecosystem হলো living organisms এবং environment এর পারস্পরিক interaction।"
+    },
+    {
+      "id": 44,
+      "student": "Iron এ rust কেন ধরে?",
+      "agent": "Iron যখন oxygen এবং moisture এর সাথে react করে তখন rust তৈরি হয়।"
+    },
+    {
+      "id": 45,
+      "student": "Temperature এর SI unit কী?",
+      "agent": "Temperature এর SI unit হলো Kelvin (K)।"
+    },
+    {
+      "id": 46,
+      "student": "Fire extinguisher এ কোন gas ব্যবহার হয়?",
+      "agent": "Carbon dioxide সাধারণত fire extinguisher এ ব্যবহার করা হয়।"
+    },
+    {
+      "id": 47,
+      "student": "Cell কী?",
+      "agent": "Cell হলো সব living organism এর basic structural unit।"
+    },
+    {
+      "id": 48,
+      "student": "Roots এর কাজ কী?",
+      "agent": "Roots soil থেকে water ও minerals absorb করে এবং plant কে support দেয়।"
+    },
+    {
+      "id": 49,
+      "student": "Refraction of light কী?",
+      "agent": "Refraction হলো এক medium থেকে অন্য medium এ গেলে light এর bending হওয়া।"
+    },
+    {
+      "id": 50,
+      "student": "Earth এর প্রধান energy source কী?",
+      "agent": "Sun হলো Earth এর প্রধান energy source।"
+    }
+  ]
+}
