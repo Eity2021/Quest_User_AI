@@ -15,9 +15,9 @@ import { Button } from "@/components/ui/button";
 
 export default function page() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-900 to-slate-950 text-white">
+    <div className="min-h-screen text-white">
       {/* Navigation Header */}
-      <nav className="border-b border-slate-800 px-8 py-6 sticky top-0 z-50 bg-slate-950/80 backdrop-blur-sm">
+      <nav className="border-b border-slate-800 px-8 py-6 sticky top-0 z-50  backdrop-blur-sm">
         <div className="container mx-auto flex items-center justify-between">
           <div className="flex items-center gap-4">
             <button className="hover:bg-slate-800 p-2 rounded-lg transition-colors">
@@ -33,11 +33,11 @@ export default function page() {
       </nav>
 
       {/* Main Content */}
-      <div className="max-w-7xl mx-auto px-8 py-12">
+      <div className="container mx-auto px-8 py-12">
         {/* Top Section: Score Card + Quick Stats */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
           <div className="lg:col-span-1">
-            <div className="relative bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-3xl p-8 h-full flex flex-col justify-between">
+            <div className="relative bg-linear-to-br from-slate-800 to-slate-900 border border-slate-700 rounded-3xl p-8 h-full flex flex-col justify-between">
               <div className="absolute top-6 right-6">
                 <button className="hover:bg-slate-700 p-2 rounded-lg transition-colors">
                   <Share2 className="w-6 h-6 text-slate-400" />
