@@ -115,7 +115,7 @@ export default function PricingSlider() {
                       {plan.name}
                     </h3>
                     <div className="flex items-baseline gap-1 mb-2">
-                      <span className="text-4xl font-bold text-accent dark:text-accent">
+                      <span className="text-4xl font-bold text-[#FF5A5F] dark:text-accent">
                         ${plan.price}
                       </span>
                       <span className="text-foreground dark:text-foreground">/mo</span>
